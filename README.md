@@ -22,4 +22,4 @@ While this program is not particularly useful for most YouTube users, it can be 
 
 To implement a moderating bot, you would need to modify the program to analyze each comment before deciding whether to delete it or not and implement the adequate HTTP request methods.
 
-Please note that the YouTube API doesn't offer the possibility to filter comments by ownership. The best approach to delete all your comments is to use an on-client script that you can run on the browser.
+Please note that the YouTube API doesn't offer the possibility to filter comments by ownership. The best approach to delete all your comments is to use an on-client script that you can run on the browser. I've added a working solution for this to the repository. The server seems to be bottlenecking the process so the timeouts might be incorrect but it does the trick.
