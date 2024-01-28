@@ -1,5 +1,6 @@
 import os
 import time
+from dotenv import load_dotenv
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
@@ -7,7 +8,8 @@ from googleapiclient.errors import HttpError
 
 CLIENT_SECRETS_FILE = os.path.join(os.path.dirname(__file__), 'service_account.json')
 SCOPES = ['https://www.googleapis.com/auth/youtube.force-ssl']
-CHANNEL_ID = 'UC-lHJZR3Gqxm24_Vd_AJ5Yw'
+load_dotenv()
+CHANNEL_ID = os.environ.get("CHANNEL_ID")
 
 def main():
     if os.path.exists('credentials.json'):

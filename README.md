@@ -7,14 +7,14 @@ This is a simple Python program that allows you to delete all (owner) comments o
 1. Clone or download this repository to your local machine.
 2. Install the required dependencies by running the command `pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client` in your terminal.
 3. Download the `client_secret.json` file from your Google Cloud Console and place it in the same directory as `main.py`.
-4. Change `CHANNEL_ID` with the desired.
-5. Add the desired users to the test user list in the OAuth consent screen.
+4. Add the desired users to the test user list in the OAuth consent screen.
+5. Create a `.env` file from `.env.template` and change the value of `CHANNEL_ID` with the desired.
 
 ## Usage
 
 1. Run the program.
 2. If it's the first time you do it, it will open a browser and ask you to log in to your Google account and authorize the application to access the YouTube Data API. Once authorized, a `credentials.json` file will be created in the same directory as `main.py`.
-3. The program will start deleting all comments on the channel with the ID specified in the `CHANNEL_ID` constant. By default, it will delete 100 comments at a time, wait for 3 seconds, and repeat until all comments are deleted.
+3. The program will start deleting all comments on the channel with the ID specified in the `CHANNEL_ID` environment variable. By default, it will delete 100 comments at a time, wait for 3 seconds, and repeat until all comments are deleted.
 
 ## Potential Use Cases
 
